@@ -34,7 +34,6 @@ def test_outh_positive(browser, custom_base_url, wait, faker_data):
     browser.save_screenshot("screenshot.png")
     # Ждём редиректа в личный кабинет
     wait.until(EC.url_contains("/customer/account"))
-
     assert "/customer/account" in browser.current_url, "URL is not correct"
 
 
